@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desired Growth — Become a Tester</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0e0e0f; color: #e8e4dc; line-height: 1.7; }
+header { padding: 48px 24px 32px; text-align: center; border-bottom: 1px solid #2e2e33; }
+header h1 { font-size: 32px; font-weight: 700; color: #c8b89a; }
+header p { color: #9a9490; margin-top: 6px; font-size: 15px; }
+nav { display: flex; justify-content: center; gap: 24px; padding: 16px 24px; border-bottom: 1px solid #2e2e33; flex-wrap: wrap; }
+nav a { color: #c8b89a; text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a:hover { color: #e8e4dc; }
+main { max-width: 680px; margin: 0 auto; padding: 40px 24px; }
+
+.hero { text-align: center; margin-bottom: 48px; }
+.hero h2 { font-size: 28px; color: #e8e4dc; font-weight: 700; margin-bottom: 12px; }
+.hero p { color: #9a9490; font-size: 16px; max-width: 520px; margin: 0 auto; }
+
+.badge-row { display: flex; justify-content: center; gap: 12px; margin: 20px 0; flex-wrap: wrap; }
+.badge { display: inline-block; padding: 4px 14px; border-radius: 99px; font-size: 12px; font-weight: 600; }
+.badge.green { background: #1a2a1a; color: #6aab78; border: 1px solid #3a5a3a; }
+.badge.gold { background: #1a1a0f; color: #c8a44a; border: 1px solid #3a3a1a; }
+.badge.purple { background: #1a1a2a; color: #9a7abf; border: 1px solid #3a3a5a; }
+
+.section-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: #5c5852; text-transform: uppercase; margin-bottom: 20px; margin-top: 40px; }
+
+.card { background: #161618; border: 1px solid #2e2e33; border-radius: 10px; padding: 20px 24px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: #e8e4dc; margin-bottom: 8px; }
+.card p { font-size: 14px; color: #9a9490; line-height: 1.6; margin-bottom: 0; }
+
+.features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
+@media (max-width: 480px) { .features { grid-template-columns: 1fr; } }
+.feature { background: #161618; border: 1px solid #2e2e33; border-radius: 8px; padding: 16px; text-align: center; }
+.feature .icon { font-size: 24px; margin-bottom: 8px; }
+.feature h4 { font-size: 13px; color: #c8b89a; font-weight: 600; margin-bottom: 4px; }
+.feature p { font-size: 12px; color: #9a9490; }
+
+.cta-box { background: linear-gradient(135deg, #1a1a0f 0%, #161618 100%); border: 1px solid #3a3a1a; border-radius: 12px; padding: 28px 24px; text-align: center; margin: 40px 0; }
+.cta-box h3 { font-size: 20px; color: #c8a44a; font-weight: 700; margin-bottom: 8px; }
+.cta-box p { font-size: 14px; color: #9a9490; margin-bottom: 20px; }
+.cta-link { display: inline-block; background: #c8b89a; color: #0e0e0f; padding: 12px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+.cta-link:hover { background: #e8e4dc; }
+
+.step { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
+.step-num { width: 32px; height: 32px; border-radius: 50%; background: #1e1e24; border: 1px solid #c8b89a; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #c8b89a; flex-shrink: 0; margin-top: 2px; }
+.step-body h3 { font-size: 15px; font-weight: 600; color: #e8e4dc; margin-bottom: 4px; }
+.step-body p { font-size: 14px; color: #9a9490; line-height: 1.6; }
+
+.note { background: #1a1a1f; border-left: 3px solid #c8b89a; padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 8px; font-size: 13px; color: #9a9490; }
+.note strong { color: #c8b89a; }
+
+.faq { margin-top: 40px; }
+.faq details { background: #161618; border: 1px solid #2e2e33; border-radius: 8px; margin-bottom: 8px; overflow: hidden; }
+.faq summary { padding: 14px 20px; font-size: 14px; font-weight: 600; color: #e8e4dc; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; color: #c8b89a; font-size: 18px; font-weight: 400; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { padding: 0 20px 16px; font-size: 13px; color: #9a9490; line-height: 1.6; }
+
+.divider { border: none; border-top: 1px solid #2e2e33; margin: 32px 0; }
+
+footer { text-align: center; padding: 32px 24px; border-top: 1px solid #2e2e33; font-size: 13px; color: #5c5852; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Desired Growth</h1>
+  <p>Help us launch on Google Play — become a tester</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="testers.html">Become a Tester</a>
+  <a href="tester_guide.html">Tester Guide</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<main>
+  <div class="hero">
+    <h2>We need Android testers</h2>
+    <p>Desired Growth is already live on the App Store. To launch on Google Play, we need 12 people to opt in as testers for 14 days. It takes 2 minutes and helps an indie app go live.</p>
+    <div class="badge-row">
+      <span class="badge green">Android only</span>
+      <span class="badge gold">2 minutes to join</span>
+      <span class="badge purple">100% private</span>
+    </div>
+  </div>
+
+  <p class="section-title">What is the app?</p>
+
+  <div class="card">
+    <h3>A private lifestyle management app</h3>
+    <p>Desired Growth helps couples and individuals exploring Dom/sub dynamics manage weekly tasks, track wellness goals, and communicate through QR code sharing. All data stays on your device — no accounts, no servers, no cloud. Built by SOCKS.</p>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="icon">📋</div>
+      <h4>Weekly Tasks</h4>
+      <p>129 tasks across 12 categories</p>
+    </div>
+    <div class="feature">
+      <div class="icon">📱</div>
+      <h4>QR Transfer</h4>
+      <p>Share tasks between devices</p>
+    </div>
+    <div class="feature">
+      <div class="icon">💧</div>
+      <h4>Health Tracking</h4>
+      <p>Water, weight & fitness logs</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🔒</div>
+      <h4>Fully Private</h4>
+      <p>No data ever leaves your phone</p>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h3>Join as a tester</h3>
+    <p>Tap the button below on your Android phone to opt in via Google Play. Stay opted in for 14 days — that's all we need.</p>
+    <a href="#" class="cta-link" id="cta-button">Open Google Play opt-in link</a>
+    <p style="margin-top: 12px; margin-bottom: 0; font-size: 12px; color: #5c5852;">You'll need to be signed into a Google account on your phone.</p>
+  </div>
+
+  <p class="section-title">How to join — 3 steps</p>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h3>Tap the opt-in link above</h3>
+      <p>Open it in Chrome on your Android phone. You'll see a Google Play page asking you to become a tester.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h3>Tap "Become a tester"</h3>
+      <p>Then tap <strong style="color:#e8e4dc">Download it on Google Play</strong> to install the app. It installs like any normal app.</p>
+      <div class="note"><strong>Important:</strong> You must stay opted in for 14 days. You don't need to use the app every day — just don't uninstall or leave the testing program.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h3>That's it — you're done</h3>
+      <p>Open the app if you'd like to try it out. Choose a role (Dom or Sub) and explore. If you have feedback, we'd love to hear it at the email below.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="faq">
+    <p class="section-title">Frequently asked questions</p>
+
+    <details>
+      <summary>Why do you need 12 testers?</summary>
+      <div class="answer">Google requires new apps to have at least 12 opted-in testers for 14 consecutive days before they can be published on Google Play. This is a policy for all new individual developer accounts — it's how Google verifies that apps are real and tested before going public.</div>
+    </details>
+
+    <details>
+      <summary>Do I have to use the app every day?</summary>
+      <div class="answer">No. You just need to stay opted in as a tester for 14 days. You're welcome to explore the app, but there's no usage requirement — just don't leave the testing program or uninstall during that period.</div>
+    </details>
+
+    <details>
+      <summary>Is any data collected?</summary>
+      <div class="answer">No. Desired Growth is fully offline. There are no accounts, no servers, and no analytics. Everything stays on your device. You can read the full <a href="privacy.html" style="color:#c8b89a;">privacy policy here</a>.</div>
+    </details>
+
+    <details>
+      <summary>What happens after 14 days?</summary>
+      <div class="answer">After the testing period, we'll apply for production access on Google Play. Once approved, the app goes live for everyone. You can keep the app installed or uninstall it — totally up to you.</div>
+    </details>
+
+    <details>
+      <summary>Is the app free?</summary>
+      <div class="answer">Yes, Desired Growth is completely free. No in-app purchases, no subscriptions.</div>
+    </details>
+
+    <details>
+      <summary>I have an iPhone — can I help?</summary>
+      <div class="answer">The app is already live on the App Store for iPhone! For this testing round we specifically need Android users. But if you know anyone with an Android phone, please share this page with them.</div>
+    </details>
+  </div>
+
+  <hr class="divider">
+
+  <div class="card" style="text-align: center;">
+    <h3>Questions or feedback?</h3>
+    <p>Email us at <a href="mailto:nicolai.smith312@gmail.com" style="color:#c8b89a;">nicolai.smith312@gmail.com</a></p>
+  </div>
+</main>
+
+<footer>© 2026 Desired Growth by SOCKS · All data stays on your device</footer>
+</body>
+</html>
